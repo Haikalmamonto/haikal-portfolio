@@ -633,6 +633,152 @@ section {
     color: var(--primary-light);
 }
 
+/* ========== ABOUT MEDIA (VIDEO & AUDIO) ========== */
+.about-media {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.media-section {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+[data-theme="light"] .media-section {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.media-section:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-glow);
+}
+
+.media-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+}
+
+.video-wrapper,
+.audio-wrapper {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+    overflow: hidden;
+    background: var(--bg-tertiary);
+}
+
+.intro-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    box-shadow: var(--shadow-md);
+}
+
+.intro-audio {
+    width: 100%;
+    padding: 1rem;
+    background: var(--bg-tertiary);
+    border-radius: 15px;
+}
+
+.media-description {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* ========== ABOUT TABLE SECTION ========== */
+.about-table-section {
+    margin-top: 4rem;
+}
+
+.table-section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    text-align: center;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 15px;
+    box-shadow: var(--shadow-md);
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] .table-wrapper {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-card);
+}
+
+.info-table thead {
+    background: var(--gradient-1);
+    color: var(--white);
+}
+
+.info-table th {
+    padding: 1.2rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-table tbody tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+[data-theme="light"] .info-table tbody tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.info-table tbody tr:hover {
+    background: var(--bg-card-hover);
+    transform: scale(1.01);
+}
+
+.info-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.info-table td {
+    padding: 1.2rem 1rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.info-table td:first-child {
+    color: var(--primary-light);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.info-table td:nth-child(2) {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
 /* ========== SKILLS SECTION ========== */
 .skills {
     background: var(--bg-primary);
@@ -1207,8 +1353,16 @@ section {
         grid-template-columns: 1fr;
     }
     
+    .about-media {
+        grid-template-columns: 1fr;
+    }
+    
     .contact-content {
         grid-template-columns: 1fr;
+    }
+    
+    .table-wrapper {
+        overflow-x: scroll;
     }
     
     .nav-menu {
@@ -1296,6 +1450,20 @@ section {
     
     .portfolio-item:hover {
         transform: scale(1.02);
+    }
+    
+    .about-media {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .info-table {
+        font-size: 0.85rem;
+    }
+    
+    .info-table th,
+    .info-table td {
+        padding: 0.8rem 0.5rem;
     }
 }
 
